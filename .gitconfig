@@ -1,0 +1,19 @@
+[diff]
+	tool = kdiff3
+	guitool = kdiff3
+[user]
+	email = tiaraju@vtex.com.br
+	name = Tiaraju
+[merge]
+	toll = kdiff3
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	trustExitCode = false
+
+[alias]
+	llog = log --graph --all
+	adda = !git add -A && git reset "src/VTEX\\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
+	brm = !git checkout master && git pull origin master && git branch | egrep -v '(master|release_candidate)|xargs git branch -D'
