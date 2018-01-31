@@ -7,7 +7,7 @@ checkBalance(){
 	fi
 }
 
-provision(){
+provisionBalance(){
 	
 	if [[ "$#" == 2 ]]; then
 		echo "running..."
@@ -19,3 +19,7 @@ provision(){
 	fi
 	
 }
+
+
+alias clean="find . -name *.orig -delete"
+ 
