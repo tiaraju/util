@@ -24,4 +24,4 @@ alias clean="find . -name *.orig -delete"
  
 alias applywebconfig="rm -rf C:/Projetos/vcs.checkout/src/VTEX/\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config & yes|cp -rf C:/Projetos/Web.config C:/Projetos/vcs.checkout/src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
 
-alias revertwebconfig="git checkout -- src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config & git checkout -- src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
+alias revertwebconfig="git checkout -- src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
