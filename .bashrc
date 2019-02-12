@@ -1,3 +1,4 @@
+
 checkBalance(){
 	if [[ "$#" != 1 ]]; then
 		echo "Missing balance name"
@@ -22,6 +23,16 @@ provisionBalance(){
 
 alias clean="find . -name *.orig -delete"
  
-alias applywebconfig="rm -rf C:/Projetos/vcs.checkout/src/VTEX/\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config & yes|cp -rf C:/Projetos/Web.config C:/Projetos/vcs.checkout/src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
+####### GIT aliases
 
-alias revertwebconfig="git checkout -- src/VTEX\ Checkout/Applications/Vtex.Commerce.Checkout.WebStore/Web.config"
+alias gst="git status" 
+alias gcm="git checkout master" 
+alias gcr="git checkout release_candidate"
+alias gp="git pull"
+alias gpr="git pull --rebase"
+alias kdiff="git difftool"
+alias kmerge="git mergetool -t kdiff3"
+alias chk="cd C:/Projetos/vcs.checkout"
+alias grm="git rebase master"
+alias grc="git rebase --continue"
+alias brm="!git checkout master && git pull origin master && git branch | egrep -v '(master|release_candidate)|xargs git branch -D'"
