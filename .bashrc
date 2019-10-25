@@ -21,7 +21,6 @@ alias brm="!git checkout master && git pull origin master && git branch | egrep 
 
 ######General aliases
 
-alias s3token='aws s3 cp s3://vtex-id/tokens/vtexappkey-appvtex.json - | grep -Po "\"token\": \"\K([^\",]*)" -m 1|clip'
 
 #branch name
 PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\] - [$(git branch 2>/dev/null | grep "^*" | colrm 1 2)\[\033[0;32m\]]\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\] '
