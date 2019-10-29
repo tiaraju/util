@@ -25,3 +25,21 @@ alias brm="!git checkout master && git pull origin master && git branch | egrep 
 #branch name
 PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\] - [$(git branch 2>/dev/null | grep "^*" | colrm 1 2)\[\033[0;32m\]]\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\] '
 
+warmup(){
+
+if [[ "$#" != 1 ]]; then
+
+	echo "Only environment URL is required"
+
+else
+	echo "Starting..."
+	for i in {0..500}
+	do
+		curl -s -f -o /dev/null $1/meta/probe
+	done
+	echo "Done"
+fi
+
+}
+
+
